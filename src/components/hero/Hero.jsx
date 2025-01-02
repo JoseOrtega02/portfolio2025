@@ -6,7 +6,7 @@ import Download from '../Icons/Download'
 
 export default function Hero() {
   return (
-    <div className='width-full p-6 flex flex-col gap-16 border-white border-solid border-b-2'>
+    <div className='width-full p-6 flex flex-col gap-12 border-white border-solid border-b-2'>
         <div className='flex flex-row justify-center'>
             <Linkedin/>
             <Github/>
@@ -18,7 +18,7 @@ export default function Hero() {
             <p className='font-slabo text-base my-9'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit.</p>
         </div>
 
-        <div className='flex flex-row justify-between'>
+        <div className='flex flex-row justify-between mt-16'>
             <button className='font-istokWeb text-base text-accent border-2 border-accent border-solid px-8 py-2'>Conoceme</button>
             <button className='flex flex-row gap-1 font-istokWeb text-base text-white border-2 border-white border-solid px-4 py-2 '>CV <Download/></button>
         </div>
