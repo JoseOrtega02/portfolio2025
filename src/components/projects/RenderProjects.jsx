@@ -36,14 +36,6 @@ function ProjectItem({ project }) {
           <p className="mb-2 text-sm px-4 text-center">This is a brief description of the project.</p>
           <div className="flex gap-2">
             <a
-              href={project.linkGithub}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-accent px-4 py-1 text-sm rounded hover:bg-opacity-80"
-            >
-              Code
-            </a>
-            <a
               href={project.linkDemo}
               target="_blank"
               rel="noopener noreferrer"
@@ -68,7 +60,7 @@ function ProjectItem({ project }) {
 
 export default function RenderProjects() {
   return (
-    <div className="mt-5 text-white flex flex-col gap-16 justify-center">
+    <div className="mt-5 text-white flex flex-col gap-16 justify-center items-center">
       {projects.map((project, index) => (
         <ProjectItem key={index} project={project} />
       ))}
