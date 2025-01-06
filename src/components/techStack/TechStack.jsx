@@ -2,7 +2,7 @@
 
 export default function TechStack() {
   return (
-    <div className="p-6 border-white border-b-2 border-solid">
+    <div className="p-6 border-white border-b-2 border-solid" id="techStack">
         <h2 className="font-merriweatherSans text-2xl text-white">Tech Stack:</h2>
         <div className="flex flex-col text-white mt-8 gap-4">
             <div className="max-w-96">

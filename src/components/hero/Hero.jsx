@@ -6,7 +6,7 @@ import Download from '../Icons/Download'
 
 export default function Hero() {
   return (
-    <div className='width-full p-6 flex flex-col gap-12 border-white border-solid border-b-2'>
+    <div className='width-full p-6 flex flex-col gap-12 border-white border-solid border-b-2' id='home'>
         <div className='flex flex-row justify-center'>
             <Linkedin/>
             <Github/>
