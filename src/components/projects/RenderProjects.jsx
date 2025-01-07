@@ -25,7 +25,7 @@ const projects = [
 
 function ProjectItem({ project }) {
   return (
-    <div className="flex flex-col justify-center gap-2 max-w-80">
+    <div className="flex flex-col justify-center gap-2 max-w-96">
       {/* Image Container */}
       <div className="relative group">
         {/* Image */}
@@ -39,7 +39,7 @@ function ProjectItem({ project }) {
               href={project.linkDemo}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-accent px-4 py-1 text-sm rounded hover:bg-opacity-80"
+              className=" px-4 py-1 text-sm border-2 border-accent border-solid  hover:bg-accent hover:text-black"
             >
               Demo
             </a>
@@ -60,7 +60,7 @@ function ProjectItem({ project }) {
 
 export default function RenderProjects() {
   return (
-    <div className="mt-5 text-white flex flex-col gap-16 justify-center items-center">
+    <div className="mt-5 text-white flex flex-wrap gap-16 justify-center items-center max-w-4xl md:mx-auto md:justify-between">
       {projects.map((project, index) => (
         <ProjectItem key={index} project={project} />
       ))}
