@@ -2,10 +2,13 @@
 
 export default function TechStack() {
   return (
-    <div className="p-6 border-white border-b-2 border-solid" id="techStack">
+    <div className=" border-white border-b-2 border-solid">
+
+    
+    <div className="p-6 max-w-4xl mx-auto md:p-0 md:py-6" id="techStack">
         <h2 className="font-merriweatherSans text-2xl text-white">Tech Stack:</h2>
-        <div className="flex flex-col text-white mt-8 gap-4">
-            <div className="max-w-96">
+        <div className="flex flex-wrap text-white mt-8 justify-between md:gap-y-8 gap-4">
+            <div className="max-w-96 w-full">
                 <h3 className="font-merriweatherSans text-xl">Front End:</h3>
                 <ul className="text-end font-slabo text-base">
                     <li>React.js</li>
@@ -17,7 +20,7 @@ export default function TechStack() {
                     <li>Redux.js</li>
                 </ul>
             </div>
-            <div className="max-w-96">
+            <div className="max-w-96 w-full">
             <h3 className="font-merriweatherSans text-xl">Back End:</h3>
                 <ul className="text-end font-slabo text-base">
                     <li>Node.js</li>
@@ -29,7 +32,7 @@ export default function TechStack() {
                     <li>Mongoose</li>
                 </ul>
             </div>
-            <div className="max-w-96">
+            <div className="max-w-96 w-full">
             <h3 className="font-merriweatherSans text-xl">More Skills:</h3>
                 <ul className="text-end font-slabo text-base">
                     <li>Agile</li>
@@ -39,6 +42,7 @@ export default function TechStack() {
                 </ul>
             </div>
         </div>
+    </div>
     </div>
   )
 }
