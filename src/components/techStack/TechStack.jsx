@@ -2,10 +2,10 @@
 
 export default function TechStack() {
   return (
-    <div className=" border-white border-b-2 border-solid">
+    <section className=" border-white border-b-2 border-solid" id="techStack">
 
     
-    <div className="p-6 max-w-4xl mx-auto md:p-0 md:py-6" id="techStack">
+    <div className="p-6 max-w-4xl mx-auto md:p-0 md:py-20" >
         <h2 className="font-merriweatherSans text-2xl text-white">Tech Stack:</h2>
         <div className="flex flex-wrap text-white mt-8 justify-between md:gap-y-8 gap-4">
             <div className="max-w-96 w-full">
@@ -43,6 +43,6 @@ export default function TechStack() {
             </div>
         </div>
     </div>
-    </div>
+    </section>
   )
 }

@@ -5,10 +5,10 @@ import Email from '../Icons/Email'
 import Download from '../Icons/Download'
 
 export default function Hero() {
-  return (<div className='flex justify-center border-white border-solid border-b-2'>
+  return (<section className='flex justify-center border-white border-solid border-b-2'id='home'>
 
  
-    <div className='w-full max-w-4xl  p-6 py-8 flex flex-col gap-12' id='home'>
+    <div className='w-full max-w-4xl  p-6 py-8 md:py-20 flex flex-col gap-12' >
         <div className='flex flex-row justify-center md:hidden'>
             <Linkedin/>
             <Github/>
@@ -46,6 +46,6 @@ export default function Hero() {
         </div>
         
     </div>
-    </div>
+    </section>
   )
 }

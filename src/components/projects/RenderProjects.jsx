@@ -39,9 +39,9 @@ function ProjectItem({ project }) {
               href={project.linkDemo}
               target="_blank"
               rel="noopener noreferrer"
-              className=" px-4 py-1 text-sm border-2 border-accent border-solid  hover:bg-accent hover:text-black"
+              className=" px-4 py-1 text-sm border-2 border-accent border-solid  transition-all duration-300 hover:bg-accent hover:text-black"
             >
-              Demo
+              Live demo
             </a>
           </div>
         </div>
@@ -50,9 +50,9 @@ function ProjectItem({ project }) {
       {/* Project Info */}
       <div className="flex justify-between items-center mt-2">
         <h1 className="font-slabo text-m">{project.name}</h1>
-        <button className="border-accent border-2 border-solid text-accent px-3 py-0.5">
-          <Code />
-        </button>
+        <button className="border-accent border-2 border-solid text-accent px-3 py-0.5 flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-accent hover:text-black group">
+      <Code />
+    </button>
       </div>
     </div>
   );
