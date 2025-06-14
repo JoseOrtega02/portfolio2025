@@ -1,9 +1,33 @@
-
-export default function TechStack() {
+const translation = {
+  ES:{tittle:"Tecnologias:",moreSkills:"Mas Habilidades:"},
+  EN:{tittle:"Tech Stack:",moreSkills:"More Skills:"}
+}
+const skillsList = {
+  ES: [
+    "Agile",
+    "S.O.L.I.D",
+    "Algoritmos",
+    "Estructuras de Datos",
+    "Arquitectura Limpia",
+    "Código Limpio",
+    "Inglés B2"
+  ],
+  EN: [
+    "Agile",
+    "S.O.L.I.D",
+    "Algorithms",
+    "Data Structures",
+    "Clean Architecture",
+    "Clean Code",
+    "English B2"
+  ]
+};
+// eslint-disable-next-line react/prop-types
+export default function TechStack({lang}) {
   return (
     <section className="border-white border-b-2 border-solid" id="techStack">
       <div className="p-6 max-w-4xl mx-auto md:p-0 md:py-20">
-        <h2 className="font-merriweatherSans text-3xl text-white">Tech Stack:</h2>
+        <h2 className="font-merriweatherSans text-3xl text-white">{translation[lang].tittle}</h2>
         <div className="flex flex-wrap text-white mt-8 justify-between md:gap-y-8 gap-4">
           <div className="max-w-96 w-full">
             <h3 className="font-merriweatherSans text-2xl">Front End:</h3>
@@ -33,15 +57,9 @@ export default function TechStack() {
             </ul>
           </div>
           <div className="max-w-96 w-full">
-            <h3 className="font-merriweatherSans text-2xl">More Skills:</h3>
+            <h3 className="font-merriweatherSans text-2xl">{translation[lang].moreSkills}</h3>
             <ul className="text-end font-slabo text-lg">
-              <li>Agile</li>
-              <li>S.O.L.I.D</li>
-              <li>Algorithms</li>
-              <li>Data Structures</li>
-              <li>Clean Architecture</li>
-              <li>Clean code</li>
-              <li>English B2</li>
+              {skillsList[lang].map((e,index)=><li key={index}>{e}</li>)}
             </ul>
           </div>
         </div>

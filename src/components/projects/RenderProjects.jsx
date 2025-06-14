@@ -10,25 +10,34 @@ const projects = [
     linkGithub: "https://github.com/JoseOrtega02?tab=repositories&q=Resumelo&type=&language=&sort=",
     linkDemo: "https://resumelo.netlify.app/",
     image: imgResumelo,
-    desc:"Full stack project, Summary social network you can upload, like and download summaries."
+    desc: {
+      ES: "Proyecto full stack, red social de resúmenes donde puedes subir, dar like y descargar resúmenes.",
+      EN: "Full stack project, summary social network where you can upload, like, and download summaries."
+    }
   },
   {
     name: "Inventario Facil",
     linkGithub: "https://github.com/JoseOrtega02?tab=repositories&q=Inventario&type=&language=&sort=",
     linkDemo: "https://inventariofacil.netlify.app/home",
     image: imgInventarioFacil,
-    desc:"Full stack project, platform for keep your stock and sales in order."
+    desc: {
+      ES: "Proyecto full stack, plataforma para mantener tu stock y ventas en orden.",
+      EN: "Full stack project, platform to keep your stock and sales organized."
+    }
   },
   {
     name: "Chiller",
     linkGithub: "https://github.com/JoseOrtega02/Chiller",
     linkDemo: "https://chillerv1.vercel.app/",
     image: imgChiller,
-    desc:"Front end  project, page where you can search movies and watch their trailers."
+    desc: {
+      ES: "Proyecto frontend, página donde puedes buscar películas y ver sus trailers.",
+      EN: "Front end project, page where you can search movies and watch their trailers."
+    }
   },
 ];
 
-function ProjectItem({ project }) {
+function ProjectItem({ project,lang }) {
   return (
     <div className="flex flex-col justify-center gap-2 max-w-96">
       
@@ -39,7 +48,7 @@ function ProjectItem({ project }) {
         {/* Overlay al hacer hover */}
         <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
           <p className="mb-2 text-base px-4 text-center">
-            {project.desc}
+            {project.desc[lang]}
           </p>
           <div className="flex gap-2">
             <a
@@ -48,7 +57,7 @@ function ProjectItem({ project }) {
               rel="noopener noreferrer"
               className="px-4 py-1 text-base border-2 border-accent border-solid transition-all duration-300 hover:bg-accent hover:text-black"
             >
-              Live demo
+             Demo 
             </a>
           </div>
         </div>
@@ -65,11 +74,11 @@ function ProjectItem({ project }) {
   );
 }
 
-export default function RenderProjects() {
+export default function RenderProjects({lang}) {
   return (
     <div className="mt-5 text-white flex flex-wrap gap-16 justify-center items-center max-w-4xl md:mx-auto md:justify-between">
       {projects.map((project, index) => (
-        <ProjectItem key={index} project={project} />
+        <ProjectItem key={index} project={project} lang={lang} />
       ))}
     </div>
   );

@@ -4,7 +4,12 @@ import Github from '../Icons/Github'
 import Email from '../Icons/Email'
 import Download from '../Icons/Download'
 import socials from "../links"
-export default function Hero() {
+const translation = {
+  ES:{role:"Desarrollador Web",desc:"Construyo aplicaciones web hermosas y funcionales, con código limpio, diseño inteligente y un enfoque en resolver problemas de manera eficiente.",btn:"Conoceme"},
+  EN:{role:"Web Developer",desc:"I build beautiful and functional web apps with clean code, smart design, and a focus on solving problems efficiently.",btn:"Know me"}
+}
+// eslint-disable-next-line react/prop-types
+export default function Hero({lang}) {
 const [linkedin, github, gmail] = socials;
   return (
     <section className='flex justify-center border-white border-solid border-b-2' id='home'>
@@ -21,10 +26,8 @@ const [linkedin, github, gmail] = socials;
         <div className='text-white flex justify-between'> 
           <div>
             <h1 className='text-6xl font-merriweatherSans md:text-7xl'>José Ortega</h1>
-            <h4 className='text-lg text-accent pl-3 font-istokWeb'>Desarrollador Web</h4>
-            <p className='font-slabo text-lg my-9 max-w-96 md:my-12'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.
-            </p>
+            <h4 className='text-lg text-accent pl-3 font-istokWeb'>{translation[lang].role}</h4>
+            <p className='font-slabo text-lg my-9 max-w-96 md:my-12'>{translation[lang].desc}</p>
           </div>
           
           <div className='hidden md:flex flex-col gap-4'>
@@ -38,7 +41,7 @@ const [linkedin, github, gmail] = socials;
         <div className='flex flex-row justify-between mt-16'>
           <a href='#projects' className='font-istokWeb text-lg text-accent border-2 border-accent border-solid px-8 py-2 
                              hover:bg-accent hover:text-black transition-all duration-300 ease-in-out'>
-            Conoceme
+            {translation[lang].btn}
           </a>
 
           <button className="flex flex-row gap-1 font-istokWeb text-lg text-white border-2 border-white border-solid px-6 py-2 

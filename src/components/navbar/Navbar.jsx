@@ -1,9 +1,8 @@
-
 import { useState, useEffect } from "react";
 import { Hamburger } from "../Icons/Hamburger";
 import { Close } from "../Icons/Close";
-
-function Navbar() {
+// eslint-disable-next-line react/prop-types
+function Navbar({lang, setLang}) {
   const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
@@ -16,7 +15,10 @@ function Navbar() {
         const sectionTop = section.offsetTop - 50; // Add offset if needed
         const sectionHeight = section.offsetHeight;
 
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
           currentSection = section.getAttribute("id");
         }
       });
@@ -38,8 +40,15 @@ function Navbar() {
       id="navbar"
       className="sticky top-0 z-10 bg-black border-b-2 border-white border-solid flex justify-center"
     >
-      <div className={isOpen ? "text-white bg-black fixed w-full h-full z-10" : "hidden"}>
-        <button className="w-full flex justify-end pr-9 py-5" onClick={() => setOpen(false)}>
+      <div
+        className={
+          isOpen ? "text-white bg-black fixed w-full h-full z-10" : "hidden"
+        }
+      >
+        <button
+          className="w-full flex justify-end pr-9 py-5"
+          onClick={() => setOpen(false)}
+        >
           <Close />
         </button>
         <div className="flex flex-col gap-12 mt-28 items-center h-full w-full font-istokWeb text-2xl">
@@ -54,8 +63,13 @@ function Navbar() {
           </a>
         </div>
       </div>
-      <div className="w-full max-w-4xl flex flex-row justify-between px-6 py-3 bg-black">
+      <div className="w-full max-w-4xl flex flex-row justify-between align-center items-center px-6 py-3 bg-black">
         <h1 className="text-white text-2xl">JO</h1>
+      <button
+        onClick={()=>setLang()}
+        className="flex font-istokWeb text-md text-white border-2 justify-center items-center border-white border-solid px-4 py-1 m-2 transition-all duration-300 ease-in-out hover:bg-white hover:text-black group" >
+        {lang}
+      </button>
         <button onClick={() => setOpen(true)} className="md:hidden">
           <Hamburger />
         </button>
@@ -76,4 +90,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
