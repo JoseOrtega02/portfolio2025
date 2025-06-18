@@ -2,8 +2,8 @@
 import Linkedin from '../Icons/Linkedin'
 import Github from '../Icons/Github'
 import Email from '../Icons/Email'
-import Download from '../Icons/Download'
 import socials from "../links"
+import { DownloadButton } from './DownloadButton'
 const translation = {
   ES:{role:"Desarrollador Web",desc:"Construyo aplicaciones web hermosas y funcionales, con código limpio, diseño inteligente y un enfoque en resolver problemas de manera eficiente.",btn:"Conoceme"},
   EN:{role:"Web Developer",desc:"I build beautiful and functional web apps with clean code, smart design, and a focus on solving problems efficiently.",btn:"Know me"}
@@ -44,11 +44,7 @@ const [linkedin, github, gmail] = socials;
             {translation[lang].btn}
           </a>
 
-          <button className="flex flex-row gap-1 font-istokWeb text-lg text-white border-2 border-white border-solid px-6 py-2 
-                             transition-all duration-300 ease-in-out hover:bg-white hover:text-black group">
-            CV
-            <Download className="text-white group-hover:text-black transition-all duration-300" />
-          </button>
+          <DownloadButton lang={lang} />
         </div>
         
       </div>
